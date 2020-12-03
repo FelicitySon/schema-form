@@ -1,11 +1,18 @@
+import { FiledPropsDefine } from '../types';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'StringField',
-  // eslint-disable-next-line
-  setup(props, { slots, emit, attrs }) {
+  props: FiledPropsDefine,
+  setup(props) {
+    const handleChange = (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      props.onChange(target.value);
+    };
     return () => {
-      return <div>hello StringField</div>;
+      const { value } = props;
+
+      return <input type="text" value={value} onInput={handleChange} />;
     };
   },
 });

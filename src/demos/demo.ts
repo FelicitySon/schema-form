@@ -3,6 +3,6 @@ export default {
   schema: {
     type: 'string',
   },
-  default: {},
   uiSchema: {},
+  default: 'edityj',
 };

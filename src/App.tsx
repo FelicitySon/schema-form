@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { defineComponent, reactive, Ref, ref, watchEffect } from 'vue';
 import { createUseStyles } from 'vue-jss';
 
